@@ -1198,6 +1198,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeLeft: 90
   timeCounter: {fileID: 1438156681}
+  gameOverOverlay: {fileID: 0}
 --- !u!1 &1260533048
 GameObject:
   m_ObjectHideFlags: 0
@@ -1731,7 +1732,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a0fd11a8d12ee6444ae4a5bff9c3c10c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

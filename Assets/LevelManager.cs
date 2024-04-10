@@ -30,24 +30,27 @@ public class LevelManager : MonoBehaviour
         //aktualizuj UI
         UpdateUI();
     }
-
     void UpdateUI()
     {
         //funkcja odpowiedzialna za aktualizacjê interfejsu u¿ytkownika
 
         timeCounter.GetComponent<TextMeshProUGUI>().text = "Pozosta³y czas:" + Mathf.Floor(timeLeft).ToString();
 
+        //jeœli czas siê skoñczy³
         if (timeLeft <= 0)
             gameOverOverlay.SetActive(true);
-
     }
     public void OnWin()
     {
-        if(other.CompareTag("LevelEnd"))
-        {
-            GameObject.Find("LevelManager").GetComponent<LevelManager>().OnLose();
+        //ta funkcja jest wywo³ywana jeœli wygramy (np dojdziemy do konca poziomu)
+        gameOverOverlay.SetActive(true);
+        gameOverOverlay.transform.Find("ReasonText").GetComponent<TextMeshProUGUI>().text = "Wygra³eœ!";
 
-        }
-
+    }
+    public void OnLose()
+    {
+        //ta fukcja jest wywo³ywana przy pora¿ce
+        gameOverOverlay.SetActive(true);
+        gameOverOverlay.transform.Find("ReasonText").GetComponent<TextMeshProUGUI>().text = "Kamera ciê zobaczy³a!";
     }
 }
