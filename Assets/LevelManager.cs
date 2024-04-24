@@ -34,7 +34,7 @@ public class LevelManager : MonoBehaviour
     {
         //funkcja odpowiedzialna za aktualizacjê interfejsu u¿ytkownika
 
-        timeCounter.GetComponent<TextMeshProUGUI>().text = "Pozosta³y czas:" + Mathf.Floor(timeLeft).ToString();
+        timeCounter.GetComponent<TextMeshProUGUI>().text = "Pozostaly czas:" + Mathf.Floor(timeLeft).ToString();
 
         //jeœli czas siê skoñczy³
         if (timeLeft <= 0)
@@ -44,13 +44,13 @@ public class LevelManager : MonoBehaviour
     {
         //ta funkcja jest wywo³ywana jeœli wygramy (np dojdziemy do konca poziomu)
         gameOverOverlay.SetActive(true);
-        gameOverOverlay.transform.Find("ReasonText").GetComponent<TextMeshProUGUI>().text = "Wygra³eœ!";
+        gameOverOverlay.transform.Find("ReasonText").GetComponent<TextMeshProUGUI>().text = "Wygrales!";
 
     }
     public void OnLose()
     {
         //ta fukcja jest wywo³ywana przy pora¿ce
         gameOverOverlay.SetActive(true);
-        gameOverOverlay.transform.Find("ReasonText").GetComponent<TextMeshProUGUI>().text = "Kamera ciê zobaczy³a!";
+        gameOverOverlay.transform.Find("ReasonText").GetComponent<TextMeshProUGUI>().text = "Kamera cie zobaczyla!";
     }
 }
